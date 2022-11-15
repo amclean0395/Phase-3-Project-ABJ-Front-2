@@ -16,4 +16,4 @@ function CategoryFourCard(){
     )
 }
 
-export default CategoryFourCard
+export default CategoryFourCard 

@@ -14,6 +14,12 @@ function CategoryTwoList(){
              <SearchTwo />
             {itemCard}
         </div>
+          </div>
+          <div>
+           <NavLink to="/CategoryOneList"> Category One Name + Image Circle </NavLink>
+          <NavLink to="/CategoryThreeList"> Category Three Name + Image Circle</NavLink>
+          <NavLink to="/CategoryFourList"> Category Four Name + Image Circle</NavLink>
+      </div>
     )
 }
 

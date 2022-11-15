@@ -3,9 +3,9 @@ import CategoryFourCard from "./CategoryFourCard"
 
 function CategoryFourList(){
 
-    //thought process, each item gets their own state because what it will render 
-    //will just be the into for this particular category. Do a GET request for each
-    //different category? on back end, only send data for those that meet the requirements. 
+    //Do a GET request for each different category? 
+    //on back end, only send data for those that meet that category. 
+    // do we still use state to then map through that data to reveal all cards through props? 
 
     const itemCard = items4.map((oneItem) =>(
         <CategoryFourCard 
@@ -17,6 +17,11 @@ function CategoryFourList(){
         <div>
             <SearchFour />
             {itemCard}
+        </div>
+        <div>
+            <NavLink to="/CategoryOneList"> Category One Name + Image Circle</NavLink>
+            <NavLink to="/CategoryTwoList"> Category Two Name + Image Circle</NavLink>
+            <NavLink to="/CategoryThreeList"> Category Three Name + Image Circle </NavLink>
         </div>
     )
 }

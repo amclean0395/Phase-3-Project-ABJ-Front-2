@@ -11,7 +11,7 @@ import CategoryFourList from "./CategoryFourList";
 
 function App() {
 
-  // fetch("http://localhost:9292/test")
+  // fetch("http://localhost:9292/high_low")
   //   .then((r) => r.json())
   //   .then((data) => console.log(data))
 
