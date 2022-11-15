@@ -3,8 +3,12 @@ import React from "react";
 function Cart(){
     return(
         <div>
+            <div>
+                <p>
 
-        </div>
+                </p>
+            </div>
+        </div>    
     )
 }
 
