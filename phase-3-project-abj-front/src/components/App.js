@@ -3,6 +3,7 @@ import Home from "./Home";
 import JewelryList from "./JewelryList";
 import ToysList from "./ToysList";
 import ElectronicsList from "./ElectronicsList";
+import HomeDecorList from "./HomeDecorList"
 
 function App() {
 
@@ -12,6 +13,7 @@ function App() {
       <ToysList />
       <JewelryList />
       <ElectronicsList />
+      <HomeDecorList />
     </div >
   );
 }
