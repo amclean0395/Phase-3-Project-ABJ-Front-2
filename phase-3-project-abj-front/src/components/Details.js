@@ -16,6 +16,8 @@ function Details() {
             });
     }, [id]);
 
+    if (!item) return <div>!</div>;
+
     const { name, price, description, image, brand_name, category, reviews } = item
 
     return (

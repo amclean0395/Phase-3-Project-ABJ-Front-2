@@ -1,5 +1,6 @@
 import React from "react";
-// import {Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 // import Header from "./Header";
 import Home from "./Home";
 // import Cart from "./Cart";
@@ -12,10 +13,16 @@ import ToysList from "./ToysList";
 function App() {
 
   return (
-    <div className="App">
-      <Home />
-      <ToysList />
-      {/* <Routes>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/home"
+          element={<Home />}/>
+          <Route path="/toys"
+          element={<ToysList />}/>
+        </Routes>
+        {/* <Details /> */}
+        {/* <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/Cart" element={<Cart />} />
         <Route path="/ToysList" element={<ToysList />}/>
@@ -27,10 +34,10 @@ function App() {
         <Route path="/CategoryFourList" element={<CategoryFourList />}/>
         <Route path="/CategoryFourList/:id" element={<Details />}/>
       </Routes> */}
-    </div>
+      </div >
+    </Router>
   );
 }
 
 export default App;
 
- 
