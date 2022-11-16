@@ -1,6 +1,6 @@
 import React from "react";
 
-function ItemOverAmount(){
+function ItemUnder(){
     return(
         //gimme the first ~10 items(or all), for the items whose 
         //price is greater then X
@@ -10,4 +10,4 @@ function ItemOverAmount(){
     )
 }
 
-export default ItemOverAmount
+export default ItemUnder
