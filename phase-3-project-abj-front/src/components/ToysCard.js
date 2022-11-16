@@ -1,12 +1,12 @@
 import React from "react";
 // import {NavLink} from "react-router-dom"
 
-function CategoryOneCard(){
+function ToysCard({ item }){
     return(
         <>
             <div className="cards">
                 <div className="cards">
-                    <img src={jsonKeyNameFromProp} alt="Error Loading Media" />
+                    <img src={item.image} alt="Error Loading Media" />
                 </div>
                 <div>
                     {/* <button><NavLink to={`/CategoryOneList/${id}`}>See More Details!</NavLink></button> */}
@@ -16,4 +16,4 @@ function CategoryOneCard(){
     )
 }
 
-export default CategoryOneCard
+export default ToysCard

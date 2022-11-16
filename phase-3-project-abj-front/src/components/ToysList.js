@@ -1,18 +1,23 @@
-import React from "react"
-import CategoryOneCard from "./CategoryOneCard"
+import React, { useState, useEffect } from "react"
+import ToysCard from "./ToysCard"
 
-function CategoryOneList(){
+function ToysList() {
+    const [toys, setToys] = useState([])
 
+    useEffect(() => {
+        fetch('localhost:9292/categories/Toys')
+            .then((r) => r.json())
+            .then(toys => setToys(toys))
+    }, [])
 
-
-
-    const itemCard = items.map((oneItem) =>(
-        <CategoryOneCard 
-            id = {oneItem.id}
+    const itemCard = toys.map((toy) => (
+        <ToysCard
+            id={toy.id}
+            item={toy}
         />
     ))
 
-    return(
+    return (
         <>
             <div>
                 <SearchOne />
@@ -27,4 +32,4 @@ function CategoryOneList(){
     )
 }
 
-export default CategoryOneList
+export default ToysList

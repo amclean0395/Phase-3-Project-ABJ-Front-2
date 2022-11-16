@@ -4,10 +4,6 @@ import ItemUnder from "./ItemUnder"
 
 function Home(){
 
-    // const categoryCard = categories.map((category)=>{return (
-
-    // )})
-
     return(
         <div>
             <div>
