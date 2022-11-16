@@ -3,7 +3,7 @@ import React from "react";
 // import Header from "./Header";
 import Home from "./Home";
 // import Cart from "./Cart";
-import Details from "./Details";
+// import Details from "./Details";
 import ToysList from "./ToysList";
 // import CategoryTwoList from "./CategoryTwoList";
 // import CategoryThreeList from "./CategoryThreeList";
