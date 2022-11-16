@@ -2,7 +2,7 @@ import React from "react";
 import Home from "./Home";
 import JewelryList from "./JewelryList";
 import ToysList from "./ToysList";
-
+import ElectronicsList from "./ElectronicsList";
 
 function App() {
 
@@ -11,6 +11,7 @@ function App() {
       <Home />
       <ToysList />
       <JewelryList />
+      <ElectronicsList />
     </div >
   );
 }
