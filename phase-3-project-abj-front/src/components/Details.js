@@ -23,7 +23,7 @@ function Details() {
     return (
         <>
             <div className="cardInfo">
-                <img src={image} alt="loading..." />
+                <img src={image} alt="loading..." width="250"/>
                 <p>{name}</p>
                 <p>{price}</p>
                 <p>{description}</p>

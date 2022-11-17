@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
-function ToysCard({ item }){
+function JewelryCard({ item }){
     return(
         <>
             <div className="cards">
@@ -9,11 +10,11 @@ function ToysCard({ item }){
                     <p>{item.name}</p>
                 </div>
                 <div>
-                    <button>See More Details!</button>
+                <Link to={`/Jewelry`}><button> See More Details!</button></Link>
                 </div>
             </div>
         </>
     )
 }
 
-export default ToysCard
+export default JewelryCard

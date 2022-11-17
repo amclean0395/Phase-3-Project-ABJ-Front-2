@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Header from "./Header";
 import Home from "./Home";
@@ -16,10 +16,24 @@ function App() {
   return (
     <div>
       <Header />
-      <Switch>
-        <div className="App">
-          <Route path="/">
-
+      <div className="App">
+        <Switch>
+          <Route path={"/items/:id"}>
+            <Details />
+          </Route>
+          <Route path={"/categories/toys"}>
+            <ToysList />
+          </Route>
+          <Route path={"/categories/jewelry"}>
+            <JewelryList />
+          </Route>
+          <Route path={"/categories/electronics"}>
+            <ElectronicsList />
+          </Route>
+          <Route path={"/categories/home_decor"}>
+            <HomeDecorList />
+          </Route>
+          <Route exact path={"/"} >
             <Home />
             <hr />
             <StaffPicksList />
@@ -27,23 +41,8 @@ function App() {
             <ItemUnderList />
             <hr />
           </Route>
-          <Route path="/items/:id">
-            <Details />
-          </Route>
-          <Route path="/toys">
-            <ToysList />
-          </Route>
-          <Route path="/jewelry">
-            <JewelryList />
-          </Route>
-          <Route path="/electronics">
-            <ElectronicsList />
-          </Route>
-          <Route path="/home_decor">
-            <HomeDecorList />
-          </Route>
-        </div >
-      </Switch>
+        </Switch>
+      </div >
     </div>
   );
 }
