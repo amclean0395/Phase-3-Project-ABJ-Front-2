@@ -8,7 +8,7 @@ function Header() {
                 <h1>Instant RegrEtsy</h1>
                 <ul>
                     <NavLink to="/"><li>I wanna go home..</li></NavLink>
-                    <NavLink to="*"><li>HERE'S YOUR CART :shopping_trolley::middle_finger:</li></NavLink>
+                    <NavLink to="*"><li>HERE'S YOUR CART 🛒</li></NavLink>
                 </ul>
             </nav>
         </div>

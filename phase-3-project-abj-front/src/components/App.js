@@ -1,5 +1,6 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
+
 import Header from "./Header";
 import Home from "./Home";
 import JewelryList from "./JewelryList";
@@ -13,26 +14,28 @@ function App() {
   return (
     <div>
       <Header />
-        <div className="App">
-          <Route path="/items/:id">
+      <div className="App">
+        <Switch>
+          <Route path={"/items/:id"}>
             <Details />
           </Route>
-          <Route path="/toys">
+          <Route path={"/toys"}>
             <ToysList />
           </Route>
-          <Route path="/jewelry">
+          <Route path={"/jewelry"}>
             <JewelryList />
           </Route>
-          <Route path="/electronics">
+          <Route path={"/electronics"}>
             <ElectronicsList />
           </Route>
-          <Route path="/home_decor">
+          <Route path={"/home_decor"}>
             <HomeDecorList />
           </Route>
-          <Route exact path="/">
+          <Route exact path={"/"} >
             <Home />
           </Route>
-        </div >
+        </Switch>
+      </div >
     </div>
   );
 }
