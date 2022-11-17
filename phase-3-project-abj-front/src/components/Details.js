@@ -41,6 +41,7 @@ function Details() {
                             <p>User Id: {review.user_id}</p>
                             <p>Stars: {review.star_rating}</p>
                             <p>Comments: {review.comment}</p>
+                            <button>Remove Review</button>
                         </div>
                     )
                 })}
