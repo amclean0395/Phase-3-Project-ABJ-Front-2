@@ -7,7 +7,7 @@ function Home() {
 
     return (
         <>
-            <div>
+            <div id="linkContainer">
                 <NavLink className="Links" to="/toys">Toys</NavLink>
                 <NavLink className="Links" to="/jewelry">Jewelry</NavLink>
                 <NavLink className="Links" to="/electronics">Electronics</NavLink>

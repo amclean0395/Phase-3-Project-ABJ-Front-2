@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 
 function StaffPicksCard({ item, id }){
     return(
-        <>
             <div className="cards">
                 <div >
                     <img src={item.image} alt="Error Loading Media" width="250"/>
@@ -12,7 +11,6 @@ function StaffPicksCard({ item, id }){
                     <Link to={`/items/${id}`}><button> See More Details!</button></Link>
                 </div>
             </div>
-        </>
     )
 }
 

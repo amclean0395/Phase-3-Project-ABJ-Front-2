@@ -11,9 +11,12 @@ import Details from "./Details"
 function App() {
 
   return (
-    <div>
-      <Header />
-        <div className="App">
+    < >
+      <div>
+        <Header />
+      </div>  
+
+      <div className="App">
           <Route path="/items/:id">
             <Details />
           </Route>
@@ -32,8 +35,8 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-        </div >
-    </div>
+      </div >
+    </>    
   );
 }
 
