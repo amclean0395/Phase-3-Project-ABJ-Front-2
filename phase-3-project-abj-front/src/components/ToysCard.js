@@ -1,6 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 
-function ToysCard({ item }){
+function ToysCard({ item, id }){
     return(
         <>
             <div className="cards">
@@ -9,7 +10,7 @@ function ToysCard({ item }){
                     <p>{item.name}</p>
                 </div>
                 <div>
-                    <button>See More Details!</button>
+                    <button><NavLink to={`/items/${id}`}>See More Details!</NavLink></button>
                 </div>
             </div>
         </>

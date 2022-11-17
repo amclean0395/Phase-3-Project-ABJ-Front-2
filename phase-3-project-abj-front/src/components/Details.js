@@ -41,10 +41,8 @@ function Details() {
                         </>
                     )
                 })}
-
             </div>
             <InputForm />
-
         </>
     )
 }

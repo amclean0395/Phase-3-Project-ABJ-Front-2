@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"
 
-function StaffPicksCard({ item }){
+function StaffPicksCard({ item, id }){
     return(
         <>
             <div className="cards">
@@ -9,7 +10,7 @@ function StaffPicksCard({ item }){
                     <p>{item.name}</p>
                 </div>
                 <div>
-                    <button>See More Details!</button>
+                    <Link to={`/items/${id}`}><button> See More Details!</button></Link>
                 </div>
             </div>
         </>
