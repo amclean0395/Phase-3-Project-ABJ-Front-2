@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react"
 import HomeDecorCard from "./HomeDecorCard"
+import HomeDecorSearch from "./HomeDecorSearch"
 
 function HomeDecorList() {
     const [decor, setDecor] = useState([])
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         fetch('http://localhost:9292/categories/Home_Decor')
@@ -10,7 +12,15 @@ function HomeDecorList() {
             .then(decor => setDecor(decor))
     }, [])
 
-    const itemCard = decor.map((thing) => (
+    const handleSearch = (e) => {
+        setSearch(e.target.value)
+      }
+
+      const searchedItems = decor.filter((d) =>
+        d.name.toLowerCase()
+            .includes(search.toLowerCase()))
+
+    const itemCard = searchedItems.map((thing) => (
         <HomeDecorCard
             id={thing.id}
             item={thing}
@@ -20,6 +30,7 @@ function HomeDecorList() {
     return (
         <>
             <div className="container">
+                <HomeDecorSearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>
