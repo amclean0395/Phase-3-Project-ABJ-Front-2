@@ -11,3 +11,90 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.cardInfo{
+  border: 2px solid red;
+  text-align: left;
+  width: 600px;
+  margin: auto;
+}
+
+.imageSize{
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 
+}
+
+.inputForm{
+  border: 3px solid red;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+/* .inputTitles{
+  margin-top: 20px;
+  margin-bottom: 9.25px;
+} */
+
+.reviewInfo{
+  border: 10px solid green;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+.reviews{
+  border: 3px solid yellow;
+}
+
+.cards {
+  text-align: center;
+  border: 5px solid black;
+  color: black;
+  padding: 5px;
+  width: 300px;
+  height: 400px;
+  margin: 1rem 2rem;
+  font-style: oblique;
+  border-radius: 4px;
+  display: inline-grid
+}
+
+.app{
+    display:flex;
+}
+
+
+.header {
+  background-color: rgba(25, 0, 255, 0.5);
+  position: absolute;
+  /* ^^^Change to absolute to keep it stationary */
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+.header h1 {
+  margin-left: 2rem;
+  font-size: 2rem;
+  font-family: "Lobster Two", cursive;
+}
+.header * {
+  display: inline;
+}
+.header li {
+  margin: 1.25rem;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  background-color:rgba(224, 221, 255, 0.6);
+  padding: 0.2rem;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+}

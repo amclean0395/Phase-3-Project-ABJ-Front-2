@@ -3,16 +3,16 @@ import React from "react";
 function InputForm(){
     return(
         <div className="inputForm">
+            <label>Submit a Review!</label>
             <form>
                 <div>
-                    <label></label>
+                    <label className="inputTitles">Comments</label>
                     <input 
-                        placeholder="Comments"
                         type="text"
                     />
-                    <label></label>
+                    <label className="inputTitles">Rating</label>
                     <input 
-                        placeholder="Rating"
+                        placeholder="ex: 1, 3, 5"
                         type="number" 
                     />
                 </div>        

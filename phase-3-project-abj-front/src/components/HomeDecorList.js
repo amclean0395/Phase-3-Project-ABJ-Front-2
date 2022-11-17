@@ -19,7 +19,7 @@ function HomeDecorList() {
 
     return (
         <>
-            <div>
+            <div className="container">
                 {itemCard}
             </div>
         </>

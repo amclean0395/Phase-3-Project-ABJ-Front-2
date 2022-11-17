@@ -1,19 +1,24 @@
 import React from "react";
-// import { Switch, Route, Link } from "react-router-dom";
-// import JewelryList from "./JewelryList";
-// import ToysList from "./ToysList";
-// import ElectronicsList from "./ElectronicsList";
-// import HomeDecorList from "./HomeDecorList"
+import { NavLink } from "react-router-dom";
+import ItemUnderList from "./ItemUnderList";
+import StaffPicksList from "./StaffPicksList";
 
 function Home() {
 
     return (
-        <div>
-            <p>Hello world!</p>
-        
-        </div>
+        <>
+            <div>
+                <NavLink className="Links" to="/toys">Toys</NavLink>
+                <NavLink className="Links" to="/jewelry">Jewelry</NavLink>
+                <NavLink className="Links" to="/electronics">Electronics</NavLink>
+                <NavLink className="Links" to="/home_decor">Home Decor</NavLink>
+            </div>
+            <div>
+                <StaffPicksList />
+                <ItemUnderList />
+            </div>
+        </>   
     )
-
 }
 
 export default Home
