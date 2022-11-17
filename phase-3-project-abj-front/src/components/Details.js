@@ -3,10 +3,15 @@ import { useParams } from "react-router-dom"
 import InputForm from "./InputForm";
 
 function Details() {
-
+    const [review, setReview] = useState([])
     const [item, setItem] = useState(null)
 
     const { id } = useParams()
+
+  function handleDeleteReview(id) {
+    const updatedReview = review.filter((r) => r.id !== id);
+    setReview(updatedReview);
+  }
 
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
@@ -36,12 +41,16 @@ function Details() {
 
             <div className="reviewInfo">
                 {reviews.map((review) => {
+                    function handleDelete() {
+                        fetch(`http://localhost:9292/reviews/${review.id}`, { method: "DELETE", })
+                        handleDeleteReview(review.id)
+                    }
                     return (
                         <div className="reviews">
                             <p>User Id: {review.user_id}</p>
                             <p>Stars: {review.star_rating}</p>
                             <p>Comments: {review.comment}</p>
-                            <button>Remove Review</button>
+                            <button onClick={handleDelete}>Delete:</button>
                         </div>
                     )
                 })}

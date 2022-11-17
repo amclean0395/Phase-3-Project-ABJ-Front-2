@@ -1,4 +1,5 @@
-import React from "react";
+// import React, { useState } from "react";
+import React from "react"
 import { Switch, Route } from "react-router-dom";
 
 import Header from "./Header";
@@ -10,6 +11,12 @@ import HomeDecorList from "./HomeDecorList"
 import Details from "./Details"
 
 function App() {
+  // const [review, setReview] = useState([])
+
+  // function handleDeleteReview(id) {
+  //   const updatedReview = review.filter((r) => r.id !== id);
+  //   setReview(updatedReview);
+  // }
 
   return (
     <div>
@@ -17,7 +24,9 @@ function App() {
       <div className="App">
         <Switch>
           <Route path={"/items/:id"}>
-            <Details />
+            <Details
+              // onDeleteReview={handleDeleteReview}
+            />
           </Route>
           <Route path={"/toys"}>
             <ToysList />
