@@ -11,10 +11,30 @@ function Details() {
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
             .then((r) => r.json())
-            .then((item) => {
-                setItem(item);
+            .then((item) => {setItem(item);
             });
     }, [id]);
+
+    function addUpdatedComment(){
+        fetch(`http://localhost:9292/items/${id}`)
+            //add state to the input
+            //finish patch request method and headers
+            //make sure patch request route is on backend
+            //test
+            
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(newConcert)
+        })
+        .then((r) => r.json())
+        .then((newConcert) => addConcert(newConcert))
+
+    }
+
+    
+
 
     if (!item) return <div>!</div>;
 
@@ -41,6 +61,8 @@ function Details() {
                             <p>User Id: {review.user_id}</p>
                             <p>Stars: {review.star_rating}</p>
                             <p>Comments: {review.comment}</p>
+                            <input type="text" placeholder={review.comment}></input>
+                            <button onClick={addUpdatedComment}>submit updated comment</button>
                             <button>Delete:</button>
                         </div>
                     )
