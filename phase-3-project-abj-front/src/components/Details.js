@@ -1,84 +1,68 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import InputForm from "./InputForm";
+import ReviewsList from "./ReviewList";
 
 function Details() {
-    const [review, setReview] = useState([])
     const [item, setItem] = useState(null)
-
+    const [itemReviews, setItemReviews] = useState([])
     const { id } = useParams()
 
-  function handleDeleteReview(id) {
-    const updatedReview = review.filter((r) => r.id !== id);
-    setReview(updatedReview);
-  }
+    function handleDeleteReview(id) {
+        const updatedReview = itemReviews.filter((re) => re.id !== id);
+        setItemReviews(updatedReview)
+    }
+
+    const handleNewReview = (newReview) => {
+        setItemReviews((itemReviews) => [...itemReviews, newReview])
+    }
+
+    const handleEditReview = (updatedReview) => {
+        setItemReviews(itemReviews => itemReviews.map(oldReview => {
+            if (oldReview.id === updatedReview.id) {
+                return updatedReview;
+            } else {
+                return oldReview;
+            }
+        }))
+    }
 
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
             .then((r) => r.json())
-            .then((item) => {setItem(item);
+            .then((item) => {
+                setItem(item);
             });
     }, [id]);
 
-    // function addUpdatedComment(){
-    //     fetch(`http://localhost:9292/items/${id}`)
-    //         //add state to the input
-    //         //finish patch request method and headers
-    //         //make sure patch request route is on backend
-    //         //test
-            
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type" : "application/json"
-    //         },
-    //         body: JSON.stringify(newConcert)
-    //     })
-    //     .then((r) => r.json())
-    //     .then((newConcert) => addConcert(newConcert))
-
-
-    if (!item) return <div>!</div>;
+    if (!item) return <h1>"Oops! There's nothing here ¯\_(ツ)_/¯"</h1>;
 
     const { name, price, description, image, brand_name, category, reviews } = item
 
     return (
         <>
+            <br></br>
             <div className="cardInfo">
                 <img className="imageSize" src={image} alt="loading..." />
-                <p className="Bold">Name: {name}</p>
-                <p>Brand: {brand_name}</p>
-                <p className="Bold">Price: ${price}.00</p>
+                <p>Name: {name}</p>
+                <p>Price: ${price}.00</p>
                 <p>Description: {description}</p>
                 <p>Brand: {brand_name}</p>
                 <p>Category: {category}</p>
             </div>
             <br></br>
-            <InputForm />
+            <InputForm
+                itemId={item.id}
+                onNewReview={handleNewReview}
+            />
             <br></br>
-
-            <div className="reviewInfo">
-                {reviews.map((review) => {
-
-                    function handleDelete(){
-                        fetch(`http://localhost:9292/reviews/${review.id}`, { 
-                            method: "DELETE", 
-                        })
-                        handleDeleteReview(review.id)
-                    }
-
-                    return (
-                        <div className="reviews">
-                            <p className="Bold">User Id: {review.user_id}</p>
-                            <p className="Bold">Stars: {review.star_rating}</p>
-                            <p>Comment: {review.comment}</p>
-                            <input type="text" placeholder={review.comment}></input>
-                            {/* <button onClick={addUpdatedComment}>submit updated comment</button> */}
-                            <button>Submit Comment Edit</button>
-                            <button onClick={handleDelete}>Delete Comment</button>
-                        </div>
-                    )
-                })}
-            </div>
+            {reviews.length > 0
+                ? <ReviewsList
+                    reviews={reviews}
+                    onDeleteReview={handleDeleteReview}
+                    onEditReview={handleEditReview}
+                />
+                : <h1>No reviews yet!</h1>}
         </>
     )
 }
