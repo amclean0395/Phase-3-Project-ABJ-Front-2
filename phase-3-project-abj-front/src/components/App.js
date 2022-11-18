@@ -18,16 +18,10 @@ function App() {
       <div className="topPart">
         <Header />
         <Categories />
-<<<<<<< HEAD
       </div>
 
       <div className="App">
         <Switch>
-=======
-      </div>  
-
-      <div className="App">
->>>>>>> 6b05ba1b500fba596a7e46630573d3af215eb79a
           <Route exact path="/items/:id">
             <Details />
           </Route>
