@@ -311,3 +311,12 @@ h3{
 .middleButton{
   text-align: center;
 }
+
+.yellow{
+    border: 2px solid black;
+    color: black;
+    background-color: rgb(232, 202, 163);
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}

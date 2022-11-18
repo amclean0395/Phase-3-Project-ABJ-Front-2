@@ -10,6 +10,7 @@ import HomeDecorList from "./HomeDecorList"
 import Details from "./Details"
 import Categories from "./Categories";
 import AllList from "./AllList";
+import Cart from "./Cart";
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
           </Route>
           <Route path="/all">
             <AllList />
+          </Route>
+          <Route path="/cart">
+            <Cart />
           </Route>
           <Route exact path="/">
             <Home />

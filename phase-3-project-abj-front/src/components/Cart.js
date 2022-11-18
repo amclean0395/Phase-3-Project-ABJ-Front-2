@@ -2,13 +2,15 @@ import React from "react";
 
 function Cart(){
     return(
-        <div>
-            <div>
-                <p>
-
+        <>
+            <br></br>
+            <div className="yellow">
+                <p >
+                    Did you really think there would be content here?
                 </p>
-            </div>
-        </div>    
+                <h1> You Fool!</h1>
+            </div>   
+        </> 
     )
 }
 

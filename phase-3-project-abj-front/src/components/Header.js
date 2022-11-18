@@ -9,7 +9,7 @@ function Header() {
             </div>
             <h1>Instant RegrEtsy</h1>
             <div>
-                <NavLink className="itemL" to="*"><button class="btn"><i class="fa fa-folder"></i></button></NavLink>
+                <NavLink className="itemL" to="/cart"><button class="btn"><i class="fa fa-folder"></i></button></NavLink>
             </div>
         </div>
     )
