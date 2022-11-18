@@ -18,17 +18,17 @@ function Details() {
 
     if (!item) return <div>!</div>;
 
-    const { name, price, description, image, brand_name, category, reviews } = item
+    const { name, price, description, image, brand_name, reviews } = item
 
     return (
         <>
+        <br></br>
             <div className="cardInfo">
                 <img className="imageSize" src={image} alt="loading..." />
                 <p>Name: {name}</p>
+                <p>Brand: {brand_name}</p>
                 <p>Price: ${price}.00</p>
                 <p>Description: {description}</p>
-                <p>Brand: {brand_name}</p>
-                <p>Category: {category}</p>
             </div>
             <br></br>
             <InputForm />

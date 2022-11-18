@@ -20,6 +20,7 @@ function HomeDecorList() {
     return (
         <>
             <div className="container">
+            <h1 className="titles">Home Decor</h1>
                 {itemCard}
             </div>
         </>

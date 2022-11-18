@@ -3,14 +3,14 @@ import { NavLink } from "react-router-dom"
 
 function Header() {
     return (
-        <div className="container2">
-            <nav className="header">
-                <h1>Instant RegrEtsy</h1>
-                <ul>
-                    <NavLink to="/"><li>I wanna go home..</li></NavLink>
-                    <NavLink to="*"><li>HERE'S YOUR CART :shopping_trolley::middle_finger:</li></NavLink>
-                </ul>
-            </nav>
+        <div className="header">
+            <div>
+                <NavLink className="itemR" to="/"><button class="btn"><i class="fa fa-home"></i></button></NavLink>
+            </div>
+            <h1>Instant RegrEtsy</h1>
+            <div>
+                <NavLink className="itemL" to="*"><button>Cart</button></NavLink>
+            </div>
         </div>
     )
 }

@@ -7,17 +7,20 @@ import ToysList from "./ToysList";
 import ElectronicsList from "./ElectronicsList";
 import HomeDecorList from "./HomeDecorList"
 import Details from "./Details"
+import Categories from "./Categories";
+import AllList from "./AllList";
 
 function App() {
 
   return (
     < >
-      <div>
+      <div className="topPart">
         <Header />
+        <Categories />
       </div>  
 
       <div className="App">
-          <Route path="/items/:id">
+          <Route exact path="/items/:id">
             <Details />
           </Route>
           <Route path="/toys">
@@ -31,6 +34,9 @@ function App() {
           </Route>
           <Route path="/home_decor">
             <HomeDecorList />
+          </Route>
+          <Route path="/all">
+            <AllList />
           </Route>
           <Route exact path="/">
             <Home />

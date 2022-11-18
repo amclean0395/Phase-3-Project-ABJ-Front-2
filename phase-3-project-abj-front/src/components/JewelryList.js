@@ -20,7 +20,7 @@ function JewelryList() {
     return (
         <>
             <div className="container">
-                <h1>Jewelry</h1>
+                <h1 className="titles">Jewelry</h1>
                 {itemCard}
             </div>
         </>
