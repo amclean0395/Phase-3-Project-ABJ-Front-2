@@ -20,7 +20,7 @@ function ToysList() {
     electronic.name.toLowerCase().includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((toy) => (
-        <ToysCard
+        <TsCard
             id={toy.id}
             item={toy}
         />
@@ -35,6 +35,8 @@ function ToysList() {
             </div>
         </>
     )
+
+    //CHange Test
 }
 
 export default ToysList
