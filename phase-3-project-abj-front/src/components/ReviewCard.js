@@ -13,17 +13,13 @@ function ReviewCard({ review, onDeleteReview, onEditReview }){
     }
 
     return(
-            <div className="review-cards">
-                <div >
-                    <li>
-                    <img className="cardImage" src={user.image} alt="https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg"/>
+            <div className="cardInfo">
+                    <img className="cardImage2" src={user.image} alt="https://pbs.twimg.com/profile_images/1237550450/mstom_400x400.jpg"/>
                     <p>{user.username}, {user.location}</p>
                     <h5>{star_rating} / 5</h5>
                     <p>{comment}</p>
                     <button onClick={handleDelete} type="submit">Remove Review</button>
-                    </li>
                     <ReviewEditForm onEditReview={onEditReview} reviewID={id}/>
-                </div>
             </div>
     )
 }
