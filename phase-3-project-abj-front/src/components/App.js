@@ -23,16 +23,16 @@ function App() {
           <Route exact path="/items/:id">
             <Details />
           </Route>
-          <Route path="/toys">
+          <Route path={"/categories/toys"}>
             <ToysList />
           </Route>
-          <Route path="/jewelry">
+          <Route path={"/categories/jewelry"}>
             <JewelryList />
           </Route>
-          <Route path="/electronics">
+          <Route path={"/categories/electronics"}>
             <ElectronicsList />
           </Route>
-          <Route path="/home_decor">
+          <Route path={"/categories/home_decor"}>
             <HomeDecorList />
           </Route>
           <Route path="/all">

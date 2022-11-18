@@ -1,6 +1,4 @@
 import React from "react";
-import { Link} from "react-router-dom"
-
 
 function ToysCard({ item, id }){
     return(
@@ -17,4 +15,4 @@ function ToysCard({ item, id }){
     )
 }
 
-export default ToysCard
+export default JewelryCard

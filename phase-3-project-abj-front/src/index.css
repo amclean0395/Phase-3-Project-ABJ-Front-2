@@ -16,6 +16,44 @@ code {
 }
 
 
+.cardInfo{
+  border: 2px solid red;
+  text-align: left;
+  width: 600px;
+  margin: auto;
+}
+
+.imageSize{
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.inputForm{
+  border: 3px solid red;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+/* .inputTitles{
+  margin-top: 20px;
+  margin-bottom: 9.25px;
+} */
+
+.reviewInfo{
+  border: 10px solid green;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+.reviews{
+  border: 3px solid yellow;
+}
+
 .cards {
   text-align: center;
   border: 2px solid black;

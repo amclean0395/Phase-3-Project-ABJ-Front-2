@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import InputForm from "./InputForm";
 
 function Details() {
-
+    const [review, setReview] = useState([])
     const [item, setItem] = useState(null)
     const [review, setReview] = useState([])
 
@@ -13,6 +13,11 @@ function Details() {
         const updatedReview = review.filter((r) => r.id !== id);
         setReview(updatedReview);
       }
+
+  function handleDeleteReview(id) {
+    const updatedReview = review.filter((r) => r.id !== id);
+    setReview(updatedReview);
+  }
 
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
@@ -40,17 +45,18 @@ function Details() {
 
     if (!item) return <div>!</div>;
 
-    const { name, price, description, image, brand_name, reviews } = item
+    const { name, price, description, image, brand_name, category, reviews } = item
 
     return (
         <>
-        <br></br>
             <div className="cardInfo">
                 <img className="imageSize" src={image} alt="loading..." />
                 <p className="Bold">Name: {name}</p>
                 <p>Brand: {brand_name}</p>
                 <p className="Bold">Price: ${price}.00</p>
                 <p>Description: {description}</p>
+                <p>Brand: {brand_name}</p>
+                <p>Category: {category}</p>
             </div>
             <br></br>
             <InputForm />
@@ -84,5 +90,3 @@ function Details() {
 }
 
 export default Details
-
-

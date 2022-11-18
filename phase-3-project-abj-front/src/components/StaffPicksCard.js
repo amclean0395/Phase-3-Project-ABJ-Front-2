@@ -1,4 +1,5 @@
 import React from "react";
+// import { Link, useHistory } from "react-router-dom"
 import { Link } from "react-router-dom"
 
 function StaffPicksCard({ item, id }){
@@ -11,6 +12,7 @@ function StaffPicksCard({ item, id }){
                     <p>{item.name}</p>
                     <p>Price: ${item.price}.00</p>
                     <Link to={`/items/${id}`}><button> See More Details!</button></Link>
+                    {/* <button onClick={handleClick}> See More Details!</button> */}
                 </div>
             </div>
     )
