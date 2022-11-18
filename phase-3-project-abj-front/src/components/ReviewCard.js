@@ -8,7 +8,8 @@ function ReviewCard({ review, onDeleteReview, onEditReview }){
         fetch(`http://localhost:9292/reviews/${id}`, { 
             method: "DELETE", 
         })
-        onDeleteReview(id)
+        onDeleteReview(id);
+        window.location.reload();
     }
 
     return(
@@ -19,7 +20,7 @@ function ReviewCard({ review, onDeleteReview, onEditReview }){
                     <p>{user.username}, {user.location}</p>
                     <h5>{star_rating} / 5</h5>
                     <p>{comment}</p>
-                    <button onClick={handleDelete}>Remove Review</button>
+                    <button onClick={handleDelete} type="submit">Remove Review</button>
                     </li>
                     <ReviewEditForm onEditReview={onEditReview} reviewID={id}/>
                 </div>

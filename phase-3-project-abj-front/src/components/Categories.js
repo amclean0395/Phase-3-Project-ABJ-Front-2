@@ -5,13 +5,13 @@ function Categories() {
     return (
         <div className="Categories">
             <h2 className="categoryTitle">Categories: </h2>
-            <div id="linkContainer">
+            <nav id="linkContainer">
             <button className="navButtons"><NavLink className="navButtons" to="/all">All</NavLink></button>
             <button className="navButtons"><NavLink className="navButtons" to="/electronics">Electronics</NavLink></button>
             <button className="navButtons"><NavLink className="navButtons" to="/home_decor">Home Decor</NavLink></button>
             <button className="navButtons"><NavLink className="navButtons" to="/jewelry">Jewelry</NavLink></button>
             <button className="navButtons"><NavLink className="navButtons" to="/toys">Toys</NavLink></button>
-            </div>
+            </nav>
         </div>
     )
         

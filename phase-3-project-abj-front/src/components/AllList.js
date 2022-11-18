@@ -18,7 +18,8 @@ function AllList() {
 
       const searchedItems = all.filter((thing) =>
         thing.name.toLowerCase()
-            .includes(search.toLowerCase()))
+            .includes(search.toLowerCase()) 
+            || thing.category.toLowerCase().includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((thing) => (
         <AllCard
