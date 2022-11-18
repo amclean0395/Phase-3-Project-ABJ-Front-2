@@ -11,8 +11,7 @@ function ElectronicsSearch({ onSearch, search }) {
                 onChange={onSearch}
             />
         </div>
-        
     )
 }
 
-export default SearchThree
+export default ElectronicsSearch

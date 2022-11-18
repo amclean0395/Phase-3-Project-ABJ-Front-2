@@ -11,8 +11,7 @@ function HomeDecorSearch({ onSearch, search }) {
                 onChange={onSearch}
             />
         </div>
-        
     )
 }
 
-export default SearchFour
+export default HomeDecorSearch
