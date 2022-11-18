@@ -6,7 +6,7 @@ function ItemUnderCard({ item, id}){
         <>
             <div className="cards">
                 <div >
-                <img src={item.image} alt="Error Loading Media" width="250"/>
+                <img className="cardImage" src={item.image} alt="Error Loading Media" width="250"/>
                     <h5>{item.name}</h5>
                     <h5>${item.price}.00</h5>
                     <Link to={`/items/${id}`}><button> See More Details!</button></Link>

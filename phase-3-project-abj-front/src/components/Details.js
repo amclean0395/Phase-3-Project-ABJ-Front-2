@@ -5,8 +5,14 @@ import InputForm from "./InputForm";
 function Details() {
 
     const [item, setItem] = useState(null)
+    const [review, setReview] = useState([])
 
     const { id } = useParams()
+
+    function handleDeleteReview(id) {
+        const updatedReview = review.filter((r) => r.id !== id);
+        setReview(updatedReview);
+      }
 
     useEffect(() => {
         fetch(`http://localhost:9292/items/${id}`)
@@ -15,25 +21,21 @@ function Details() {
             });
     }, [id]);
 
-    function addUpdatedComment(){
-        fetch(`http://localhost:9292/items/${id}`)
-            //add state to the input
-            //finish patch request method and headers
-            //make sure patch request route is on backend
-            //test
+    // function addUpdatedComment(){
+    //     fetch(`http://localhost:9292/items/${id}`)
+    //         //add state to the input
+    //         //finish patch request method and headers
+    //         //make sure patch request route is on backend
+    //         //test
             
-            method: "POST",
-            headers: {
-                "Content-Type" : "application/json"
-            },
-            body: JSON.stringify(newConcert)
-        })
-        .then((r) => r.json())
-        .then((newConcert) => addConcert(newConcert))
-
-    }
-
-    
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type" : "application/json"
+    //         },
+    //         body: JSON.stringify(newConcert)
+    //     })
+    //     .then((r) => r.json())
+    //     .then((newConcert) => addConcert(newConcert))
 
 
     if (!item) return <div>!</div>;
@@ -45,9 +47,9 @@ function Details() {
         <br></br>
             <div className="cardInfo">
                 <img className="imageSize" src={image} alt="loading..." />
-                <p>Name: {name}</p>
+                <p className="Bold">Name: {name}</p>
                 <p>Brand: {brand_name}</p>
-                <p>Price: ${price}.00</p>
+                <p className="Bold">Price: ${price}.00</p>
                 <p>Description: {description}</p>
             </div>
             <br></br>
@@ -56,14 +58,23 @@ function Details() {
 
             <div className="reviewInfo">
                 {reviews.map((review) => {
+
+                    function handleDelete(){
+                        fetch(`http://localhost:9292/reviews/${review.id}`, { 
+                            method: "DELETE", 
+                        })
+                        handleDeleteReview(review.id)
+                    }
+
                     return (
                         <div className="reviews">
-                            <p>User Id: {review.user_id}</p>
-                            <p>Stars: {review.star_rating}</p>
-                            <p>Comments: {review.comment}</p>
+                            <p className="Bold">User Id: {review.user_id}</p>
+                            <p className="Bold">Stars: {review.star_rating}</p>
+                            <p>Comment: {review.comment}</p>
                             <input type="text" placeholder={review.comment}></input>
-                            <button onClick={addUpdatedComment}>submit updated comment</button>
-                            <button>Delete:</button>
+                            {/* <button onClick={addUpdatedComment}>submit updated comment</button> */}
+                            <button>Submit Comment Edit</button>
+                            <button onClick={handleDelete}>Delete Comment</button>
                         </div>
                     )
                 })}

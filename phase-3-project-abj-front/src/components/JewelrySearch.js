@@ -1,12 +1,20 @@
 import React from "react";
 
-function SearchOne(){
-    return(
-        <div>
-
+function JewelrySearch({ onSearch, search }) {
+    return (
+        <div className="search">
+            <label>Search by Name:</label>
+            <div className="suspect-container">
+                <input
+                    id="search"
+                    type="text"
+                    placeholder="Sterling..."
+                    value={search}
+                    onChange={onSearch}
+                />
+            </div>
         </div>
-        
     )
 }
 
-export default SearchOne
+export default JewelrySearch

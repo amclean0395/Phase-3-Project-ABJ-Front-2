@@ -5,7 +5,7 @@ function StaffPicksCard({ item, id }){
     return(
             <div className="cards">
                 <div className="image">
-                    <img src={item.image} alt="Error Loading Media"/>
+                    <img className="cardImage" src={item.image} alt="Error Loading Media"/>
                 </div>
                 <div>
                     <p>{item.name}</p>
