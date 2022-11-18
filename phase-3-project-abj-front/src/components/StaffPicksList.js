@@ -20,7 +20,7 @@ function StaffPicksList() {
     return (
         <>
             <div className="container">
-                <h2 className>Staff Picks!</h2>
+                <h1 className="titles">Staff Picks!</h1>
                 {itemCard}
             </div>
         </>

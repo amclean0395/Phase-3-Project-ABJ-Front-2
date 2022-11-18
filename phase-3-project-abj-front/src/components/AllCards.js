@@ -1,6 +1,7 @@
 import React from "react";
+import { NavLink } from "react-router-dom"
 
-function ToysCard({ item, id }){
+function AllCard({ item, id }){
     return(
         <>
             <div className="cards">
@@ -8,11 +9,11 @@ function ToysCard({ item, id }){
                     <img src={item.image} alt="Error Loading Media" width="250"/>
                     <p>{item.name}</p>
                     <p>${item.price}.00</p>
-                    <Link to={`/items/${id}`}><button> See More Details!</button></Link>
+                    <NavLink to={`/items/${id}`}><button> See More Details!</button></NavLink>
                 </div>
             </div>
         </>
     )
 }
 
-export default JewelryCard
+export default AllCard

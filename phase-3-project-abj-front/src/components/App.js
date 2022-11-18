@@ -1,4 +1,3 @@
-// import React, { useState } from "react";
 import React from "react"
 import { Switch, Route } from "react-router-dom";
 
@@ -9,43 +8,45 @@ import ToysList from "./ToysList";
 import ElectronicsList from "./ElectronicsList";
 import HomeDecorList from "./HomeDecorList"
 import Details from "./Details"
+import Categories from "./Categories";
+import AllList from "./AllList";
 
 function App() {
-  // const [review, setReview] = useState([])
-
-  // function handleDeleteReview(id) {
-  //   const updatedReview = review.filter((r) => r.id !== id);
-  //   setReview(updatedReview);
-  // }
 
   return (
-    <div>
-      <Header />
+    < >
+      <div className="topPart">
+        <Header />
+        <Categories />
+      </div>
+
       <div className="App">
         <Switch>
-          <Route path={"/items/:id"}>
-            <Details
-              // onDeleteReview={handleDeleteReview}
-            />
+          <Route exact path="/items/:id">
+            <Details />
           </Route>
-          <Route path={"/toys"}>
+          <Route path={"/categories/toys"}>
             <ToysList />
           </Route>
-          <Route path={"/jewelry"}>
+          <Route path={"/categories/jewelry"}>
             <JewelryList />
           </Route>
-          <Route path={"/electronics"}>
+          <Route path={"/categories/electronics"}>
             <ElectronicsList />
           </Route>
-          <Route path={"/home_decor"}>
+          <Route path={"/categories/home_decor"}>
             <HomeDecorList />
           </Route>
-          <Route exact path={"/"} >
+          <Route path="/all">
+            <AllList />
+          </Route>
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
+
       </div >
-    </div>
+    </>
   );
 }
 

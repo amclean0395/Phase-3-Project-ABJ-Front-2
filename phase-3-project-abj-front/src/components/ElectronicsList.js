@@ -30,7 +30,8 @@ function ElectronicsList() {
     return (
         <>
             <div className="container">
-                <ElectronicsSearch onSearch={handleSearch} search={search}/>
+            <h1 className="titles">Electronics</h1>
+            <ElectronicsSearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>
