@@ -12,6 +12,7 @@ function StaffPicksList() {
 
     const itemCard = staffPicks.map((thing) => (
         <StaffPicksCard
+            key={thing.id}
             id={thing.id}
             item={thing}
         />

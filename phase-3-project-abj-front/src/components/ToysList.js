@@ -20,7 +20,8 @@ function ToysList() {
     electronic.name.toLowerCase().includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((toy) => (
-        <TsCard
+        <ToysCard
+            key={toy.id}
             id={toy.id}
             item={toy}
         />
@@ -30,7 +31,7 @@ function ToysList() {
         <>
             <div className="container">
             <h1 className="titles">Toys</h1>
-            <ToySearch onSearch={handleSearch}/>
+            <ToySearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>

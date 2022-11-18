@@ -22,6 +22,7 @@ function HomeDecorList() {
 
     const itemCard = searchedItems.map((thing) => (
         <HomeDecorCard
+            key={thing.id}
             id={thing.id}
             item={thing}
         />
@@ -31,7 +32,7 @@ function HomeDecorList() {
         <>
             <div className="container">
             <h1 className="titles">Home Decor</h1>
-                <HomeDecorSearch onSearch={handleSearch} />
+                <HomeDecorSearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>

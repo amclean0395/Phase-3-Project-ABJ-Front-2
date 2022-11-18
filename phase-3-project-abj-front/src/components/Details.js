@@ -5,14 +5,8 @@ import InputForm from "./InputForm";
 function Details() {
     const [review, setReview] = useState([])
     const [item, setItem] = useState(null)
-    const [review, setReview] = useState([])
 
     const { id } = useParams()
-
-    function handleDeleteReview(id) {
-        const updatedReview = review.filter((r) => r.id !== id);
-        setReview(updatedReview);
-      }
 
   function handleDeleteReview(id) {
     const updatedReview = review.filter((r) => r.id !== id);

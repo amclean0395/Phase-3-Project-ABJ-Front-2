@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 function ToysCard({ item, id }){
     return(
@@ -9,7 +9,7 @@ function ToysCard({ item, id }){
                     <img  className="cardImage" src={item.image} alt="Error Loading Media" width="250"/>
                     <p>{item.name}</p>
                     <p>${item.price}.00</p>
-                    <button><Link to={`/items/${id}`}>See More Details!</Link></button>
+                    <button><NavLink to={`/items/${id}`}>See More Details!</NavLink></button>
                 </div>
             </div>
         </>

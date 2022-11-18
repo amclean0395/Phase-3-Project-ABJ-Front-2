@@ -21,6 +21,7 @@ function JewelryList() {
 
     const itemCard = searchedItems.map((jewel) => (
         <JewelryCard
+            key={jewel.id}
             id={jewel.id}
             item={jewel}
         />
@@ -30,7 +31,7 @@ function JewelryList() {
         <>
             <div className="container">
                 <h1 className="titles">Jewelry</h1>
-                <JewelrySearch onSearch={handleSearch}/>
+                <JewelrySearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>

@@ -12,6 +12,7 @@ function ItemUnderList() {
 
     const itemCard = itemsUnder.map((thing) => (
         <ItemUnderCard
+            key={thing.id}
             id={thing.id}
             item={thing}
         />

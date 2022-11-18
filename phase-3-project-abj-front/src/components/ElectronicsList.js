@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import ElectronicsCard from "./ElectronicsCard"
 import ElectronicsSearch from "./ElectronicsSearch"
-import ElectronicsSearch from "./ElectronicsSearch"
 
 function ElectronicList() {
     const [electronics, setElectronics] = useState([])
@@ -22,6 +21,7 @@ function ElectronicList() {
 
     const itemCard = searchedItems.map((thing) => (
         <ElectronicsCard
+            key={thing.id}
             id={thing.id}
             item={thing}
         />
