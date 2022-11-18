@@ -8,7 +8,7 @@ function HomeDecorSearch({ onSearch, search }) {
                 <input
                     id="search"
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Cactus Blossom..."
                     value={search}
                     onChange={onSearch}
                 />

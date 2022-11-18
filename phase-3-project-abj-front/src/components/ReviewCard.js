@@ -18,7 +18,8 @@ function ReviewCard({ review, onDeleteReview, onEditReview }){
                     <p>{user.username}, {user.location}</p>
                     <h5>{star_rating} / 5</h5>
                     <p>{comment}</p>
-                    <button onClick={handleDelete} type="submit">Remove Review</button>
+                    <button onClick={handleDelete}>Remove Review</button>
+                    <br></br>
                     <ReviewEditForm onEditReview={onEditReview} reviewID={id}/>
             </div>
     )

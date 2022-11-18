@@ -8,7 +8,7 @@ function ElectronicsSearch({ onSearch, search }) {
                 <input
                     id="search"
                     type="text"
-                    placeholder="Search..."
+                    placeholder="Airpods..."
                     value={search}
                     onChange={onSearch}
                 />
