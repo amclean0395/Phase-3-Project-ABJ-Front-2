@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom"
 
-function StaffPicksCard({ item, id }){
+function TrendingCard({ review, id }){
+    const { item } = review
     return(
             <div className="cards">
                 <div >
@@ -14,4 +15,4 @@ function StaffPicksCard({ item, id }){
     )
 }
 
-export default StaffPicksCard
+export default TrendingCard

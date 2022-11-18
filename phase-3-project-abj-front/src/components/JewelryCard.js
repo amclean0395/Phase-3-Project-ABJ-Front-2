@@ -1,6 +1,8 @@
 import React from "react";
+import { Link} from "react-router-dom"
 
-function ToysCard({ item, id }){
+
+function JewelryCard({ item, id }){
     return(
         <>
             <div className="cards">

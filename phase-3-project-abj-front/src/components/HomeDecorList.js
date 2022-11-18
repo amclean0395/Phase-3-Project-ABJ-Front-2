@@ -14,9 +14,9 @@ function HomeDecorList() {
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
-    }
+      }
 
-    const searchedItems = decor.filter((d) =>
+      const searchedItems = decor.filter((d) =>
         d.name.toLowerCase()
             .includes(search.toLowerCase()))
 
@@ -30,8 +30,7 @@ function HomeDecorList() {
     return (
         <>
             <div className="container">
-                <h1 className="titles">Home Decor</h1>
-                <HomeDecorSearch onSearch={handleSearch} search={search} />
+                <HomeDecorSearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>

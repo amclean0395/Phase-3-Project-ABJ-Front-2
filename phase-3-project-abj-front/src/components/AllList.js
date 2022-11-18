@@ -1,15 +1,26 @@
 import React, { useState, useEffect } from "react"
 import AllCard from "./AllCards"
+import AllSearch from "./AllSearch"
+
 function AllList() {
     const [all, setAll] = useState([])
+    const [search, setSearch] = useState('')
 
     useEffect(() => {
         fetch('http://localhost:9292/item_all')
             .then((r) => r.json())
-            .then(electronics => setAll(electronics))
+            .then(all => setAll(all))
     }, [])
 
-    const itemCard = all.map((thing) => (
+    const handleSearch = (e) => {
+        setSearch(e.target.value)
+      }
+
+      const searchedItems = all.filter((thing) =>
+        thing.name.toLowerCase()
+            .includes(search.toLowerCase()))
+
+    const itemCard = searchedItems.map((thing) => (
         <AllCard
             id={thing.id}
             item={thing}
@@ -20,6 +31,7 @@ function AllList() {
         <>
             <div className="container">
                 <h1 className="titles">All</h1>
+                <AllSearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
         </>

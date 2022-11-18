@@ -1,33 +1,35 @@
 import React, { useState } from "react";
 
-function InputForm({ itemId, onNewReview }) {
-    const [comment, setComment] = useState('');
+function ReviewEditForm({ onEditReview, reviewID }) {
     const [starRating, setStarRating] = useState('')
+    const [comment, setComment] = useState('')
 
-    function addNewReview(e) {
+
+    const handleEdit = (e) => {
         e.preventDefault();
-        fetch(`http://localhost:9292/new_review/`, {
-            method: "POST",
+
+        fetch(`http://localhost:9292/edit_review/${reviewID}`, {
+            method: "PATCH",
             headers: {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json"
             },
-            body: JSON.stringify({ item_id: itemId, star_rating: starRating, comment: comment })
+            body: JSON.stringify({
+                star_rating: starRating, 
+                comment: comment
+            }),
         })
-            .then((r) => r.json())
-            .then((review) => {
-                onNewReview(review);
-                console.log(review);
-                setComment(comment)
-                setStarRating(starRating)
-            })
+        .then((r)=>r.json())
+        .then((updatedReview) => {
+            onEditReview(updatedReview);
+        })
     }
-    // ^^^ useHistory to navigate back to the Details page?
+
     return (
         <div className="inputForm">
-            <label>Submit a Review!</label>
-            <form onSubmit={(e) => addNewReview(e)}>
+            <label>Edit this review!</label>
+            <form onSubmit={handleEdit}>
                 <div>
-                    <label className="inputTitles">Comments</label>
+                    <label className="inputTitles">New Comment</label>
                     <input
                         type="text"
                         id="comments"
@@ -37,7 +39,7 @@ function InputForm({ itemId, onNewReview }) {
                         }}
                         value={comment}
                     />
-                    <label className="inputTitles">Rating</label>
+                    <label className="inputTitles">New Rating</label>
                     <input
                         placeholder="ex: 1, 3, 5"
                         type="number"
@@ -59,4 +61,4 @@ function InputForm({ itemId, onNewReview }) {
     )
 }
 
-export default InputForm
+export default ReviewEditForm;
