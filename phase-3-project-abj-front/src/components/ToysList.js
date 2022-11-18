@@ -14,9 +14,9 @@ function ToysList() {
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
-      }
+    }
 
-      const searchedItems = toys.filter((toy) =>
+    const searchedItems = toys.filter((toy) =>
         toy.name.toLowerCase()
             .includes(search.toLowerCase()))
 
@@ -30,7 +30,8 @@ function ToysList() {
     return (
         <>
             <div className="container">
-                <ToysSearch onSearch={handleSearch} search={search}/>
+                <h2 className="titles">Toys</h2>
+                <ToysSearch onSearch={handleSearch} search={search} />
                 {itemCard}
             </div>
         </>

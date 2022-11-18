@@ -6,7 +6,7 @@ function AllCard({ item, id }){
         <>
             <div className="cards">
                 <div>
-                    <img src={item.image} alt="Error Loading Media" width="250"/>
+                    <img className="cardImage" src={item.image} alt="Error Loading Media" width="250"/>
                     <p>{item.name}</p>
                     <p>${item.price}.00</p>
                     <NavLink to={`/items/${id}`}><button> See More Details!</button></NavLink>

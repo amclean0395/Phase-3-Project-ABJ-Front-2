@@ -41,6 +41,7 @@ function Details() {
 
     return (
         <>
+            <br />
             <div className="cardInfo">
                 <img className="imageSize" src={image} alt="loading..." />
                 <p>Name: {name}</p>

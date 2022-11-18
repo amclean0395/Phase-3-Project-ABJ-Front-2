@@ -30,6 +30,7 @@ function JewelryList() {
     return (
         <>
             <div className="container">
+                <h1 className="titles">Jewelry</h1>
                 <JewelrySearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>
