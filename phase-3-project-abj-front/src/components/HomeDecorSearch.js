@@ -1,12 +1,17 @@
 import React from "react";
 
-function SearchFour(){
-    return(
-        <div>
-
+function HomeDecorSearch({ onSearch, search }) {
+    return (
+        <div className="suspect-container">
+            <input
+                id="search"
+                type="text"
+                placeholder="Search..."
+                value={search}
+                onChange={onSearch}
+            />
         </div>
-        
     )
 }
 
-export default SearchFour
+export default HomeDecorSearch
