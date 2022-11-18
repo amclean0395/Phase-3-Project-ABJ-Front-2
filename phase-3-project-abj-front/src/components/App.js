@@ -1,24 +1,26 @@
 import React from "react";
-import { Switch, Route } from "react-router-dom";
-
+import { Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
-import ItemUnderList from "./ItemUnderList"
 import JewelryList from "./JewelryList";
 import ToysList from "./ToysList";
 import ElectronicsList from "./ElectronicsList";
 import HomeDecorList from "./HomeDecorList"
-import StaffPicksList from "./StaffPicksList";
 import Details from "./Details"
+import Categories from "./Categories";
+import AllList from "./AllList";
 
 function App() {
 
   return (
-    <div>
-      <Header />
+    < >
+      <div className="topPart">
+        <Header />
+        <Categories />
+      </div>  
+
       <div className="App">
-        <Switch>
-          <Route path={"/items/:id"}>
+          <Route exact path="/items/:id">
             <Details />
           </Route>
           <Route path={"/categories/toys"}>
@@ -33,17 +35,14 @@ function App() {
           <Route path={"/categories/home_decor"}>
             <HomeDecorList />
           </Route>
-          <Route exact path={"/"} >
-            <Home />
-            <hr />
-            <StaffPicksList />
-            <hr />
-            <ItemUnderList />
-            <hr />
+          <Route path="/all">
+            <AllList />
           </Route>
-        </Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
       </div >
-    </div>
+    </>    
   );
 }
 

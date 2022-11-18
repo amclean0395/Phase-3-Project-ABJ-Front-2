@@ -18,31 +18,34 @@ function Details() {
 
     if (!item) return <div>!</div>;
 
-    const { name, price, description, image, brand_name, category, reviews } = item
+    const { name, price, description, image, brand_name, reviews } = item
 
     return (
         <>
+        <br></br>
             <div className="cardInfo">
-                <img src={image} alt="loading..." width="250"/>
-                <p>{name}</p>
-                <p>{price}</p>
-                <p>{description}</p>
-                <p>{brand_name}</p>
-                <p>{category}</p>
+                <img className="imageSize" src={image} alt="loading..." />
+                <p>Name: {name}</p>
+                <p>Brand: {brand_name}</p>
+                <p>Price: ${price}.00</p>
+                <p>Description: {description}</p>
             </div>
+            <br></br>
+            <InputForm />
+            <br></br>
 
             <div className="reviewInfo">
                 {reviews.map((review) => {
                     return (
-                        <>
-                            <p>{review.user_id}</p>
-                            <p>{review.star_rating}</p>
-                            <p>{review.comment}</p>
-                        </>
+                        <div className="reviews">
+                            <p>User Id: {review.user_id}</p>
+                            <p>Stars: {review.star_rating}</p>
+                            <p>Comments: {review.comment}</p>
+                            <button>Delete:</button>
+                        </div>
                     )
                 })}
             </div>
-            <InputForm />
         </>
     )
 }

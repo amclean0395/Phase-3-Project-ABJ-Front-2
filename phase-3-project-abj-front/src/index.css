@@ -1,11 +1,11 @@
 body {
-  margin: 0;
-  margin-top: 5rem;
+  margin-top: 80px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: auto;
 }
 
 code {
@@ -13,9 +13,97 @@ code {
     monospace;
 }
 
-#header {
+
+.cardInfo{
+  border: 2px solid red;
+  text-align: left;
+  width: 600px;
+  margin: auto;
+}
+
+.imageSize{
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 
+}
+
+.inputForm{
+  border: 3px solid red;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+/* .inputTitles{
+  margin-top: 20px;
+  margin-bottom: 9.25px;
+} */
+
+.reviewInfo{
+  border: 10px solid green;
+  text-align: center;
+  width: 500px;
+  margin: auto;
+}
+
+.reviews{
+  border: 3px solid yellow;
+}
+
+.cards {
+  text-align: center;
+  border: 5px solid black;
+  color: black;
+  padding: 2px;
+  width: 200px;
+  height: 350px;
+  margin: 10px;
+  font-style: oblique;
+  border-radius: 4px;
+  display: inline-grid;
+}
+
+.container{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#linkContainer{
+  padding: 15px;
+  text-align:unset;
+  background: rgb(224, 182, 30);
+  color: white;
+  font-size: 15px;
+  padding: 5px;
+  width: 85%;
+  margin: auto;
+  box-sizing: border-box;
+  height: 27px;
+  align-content: cent;
+  border-radius: 4px;
+}
+
+img{
+  height: 200px;
+  width: 200px;
+}
+
+
+
+.Links {
+  display: inline-block;
+  width: 25%;
+  text-align: center;
+;}
+
+
+
+.header {
   background-color: rgba(25, 0, 255, 0.5);
-  position: fixed;
+  position: absolute;
   /* ^^^Change to absolute to keep it stationary */
   top: 0;
   left: 0;
@@ -24,18 +112,15 @@ code {
   display: flex;
   align-items: center;
 }
-
-#header h1 {
+.header h1 {
   margin-left: 2rem;
   font-size: 2rem;
   font-family: "Lobster Two", cursive;
 }
-
-#header * {
+.header * {
   display: inline;
 }
-
-#header li {
+.header li {
   margin: 1.25rem;
   color: black;
   text-decoration: none;
@@ -45,3 +130,9 @@ code {
   border-radius: 5px;
   font-family: "Montserrat", sans-serif;
 }
+
+
+.app{
+  text-align: center;
+}
+

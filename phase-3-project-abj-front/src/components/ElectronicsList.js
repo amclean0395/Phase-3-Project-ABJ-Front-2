@@ -19,7 +19,8 @@ function JewelryList() {
 
     return (
         <>
-            <div>
+            <div className="container">
+            <h1 className="titles">Electronics</h1>
                 {itemCard}
             </div>
         </>

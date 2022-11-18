@@ -19,7 +19,8 @@ function ToysList() {
 
     return (
         <>
-            <div>
+            <div className="container">
+            <h1 className="titles">Toys</h1>
                 {itemCard}
             </div>
         </>

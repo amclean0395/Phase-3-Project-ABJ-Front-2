@@ -3,25 +3,18 @@ import React from "react";
 import { Link } from "react-router-dom"
 
 function StaffPicksCard({ item, id }){
-    // const history = useHistory();
-
-    // function showDetails() {
-    //     history.push(`/items/${id}`);
-    // }
-     return(
-        <>
+    return(
             <div className="cards">
-                <div className="cards">
-                    <img src={item.image} alt="Error Loading Media" width="250" />
-                    <p>{item.name}</p>
+                <div className="image">
+                    <img src={item.image} alt="Error Loading Media"/>
                 </div>
                 <div>
-                    {/* <button onClick={showDetails}>Details Plz</button> */}
+                    <p>{item.name}</p>
+                    <p>Price: ${item.price}.00</p>
                     <Link to={`/items/${id}`}><button> See More Details!</button></Link>
                     {/* <button onClick={handleClick}> See More Details!</button> */}
                 </div>
             </div>
-        </>
     )
 }
 

@@ -19,7 +19,8 @@ function ItemUnderList() {
 
     return (
         <>
-            <div>
+            <div className="container">
+                <h1 className="titles">Item's Under $30!</h1>
                 {itemCard}
             </div>
         </>
