@@ -1,5 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom"
+import { Link} from "react-router-dom"
+
 
 function JewelryCard({ item, id }){
     return(
@@ -9,7 +10,7 @@ function JewelryCard({ item, id }){
                     <img className="cardImage" src={item.image} alt="Error Loading Media" width="250"/>
                     <p>{item.name}</p>
                     <p>${item.price}.00</p>
-                    <NavLink to={`/items/${id}`}><button> See More Details!</button></NavLink>
+                    <Link to={`/items/${id}`}><button> See More Details!</button></Link>
                 </div>
             </div>
         </>

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react"
 import ElectronicsCard from "./ElectronicsCard"
 import ElectronicsSearch from "./ElectronicsSearch"
 
-function ElectronicList() {
+function ElectronicsList() {
     const [electronics, setElectronics] = useState([])
     const [search, setSearch] = useState('')
 
@@ -14,14 +14,14 @@ function ElectronicList() {
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
-      }
+    }
 
     const searchedItems = electronics.filter((electronic) =>
-    electronic.name.toLowerCase().includes(search.toLowerCase()))
+        electronic.name.toLowerCase()
+            .includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((thing) => (
         <ElectronicsCard
-            key={thing.id}
             id={thing.id}
             item={thing}
         />
@@ -30,12 +30,12 @@ function ElectronicList() {
     return (
         <>
             <div className="container">
-            <h1 className="titles">Electronics</h1>
-            <ElectronicsSearch onSearch={handleSearch} search={search}/>
+                <h1 className="titles">Electronics</h1>
+                <ElectronicsSearch onSearch={handleSearch} search={search} />
                 {itemCard}
             </div>
         </>
     )
 }
 
-export default ElectronicList
+export default ElectronicsList

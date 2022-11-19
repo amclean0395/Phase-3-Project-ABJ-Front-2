@@ -8,7 +8,7 @@ function AllSearch({ onSearch, search }) {
                 <input
                     id="search"
                     type="text"
-                    placeholder="14K Gold Pearl..."
+                    placeholder="Rainbow..."
                     value={search}
                     onChange={onSearch}
                 />

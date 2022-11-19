@@ -12,7 +12,6 @@ function ItemUnderList() {
 
     const itemCard = itemsUnder.map((thing) => (
         <ItemUnderCard
-            key={thing.id}
             id={thing.id}
             item={thing}
         />
@@ -21,7 +20,7 @@ function ItemUnderList() {
     return (
         <>
             <div className="container">
-                <h1 className="titles">Item's Under $30!</h1>
+                <h2 className="homeTotals">Item's Under $30!</h2>
                 {itemCard}
             </div>
         </>

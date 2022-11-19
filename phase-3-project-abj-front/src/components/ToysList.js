@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import ToysCard from "./ToysCard"
-import ToySearch from "./ToysSearch"
+import ToysSearch from "./ToysSearch"
 
 function ToysList() {
     const [toys, setToys] = useState([])
@@ -14,14 +14,14 @@ function ToysList() {
 
     const handleSearch = (e) => {
         setSearch(e.target.value)
-      }
+    }
 
-    const searchedItems = toys.filter((electronic) =>
-    electronic.name.toLowerCase().includes(search.toLowerCase()))
+    const searchedItems = toys.filter((toy) =>
+        toy.name.toLowerCase()
+            .includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((toy) => (
         <ToysCard
-            key={toy.id}
             id={toy.id}
             item={toy}
         />
@@ -30,14 +30,12 @@ function ToysList() {
     return (
         <>
             <div className="container">
-            <h1 className="titles">Toys</h1>
-            <ToySearch onSearch={handleSearch} search={search}/>
+                <h1 className="titles">Toys</h1>
+                <ToysSearch onSearch={handleSearch} search={search} />
                 {itemCard}
             </div>
         </>
     )
-
-    //CHange Test
 }
 
 export default ToysList

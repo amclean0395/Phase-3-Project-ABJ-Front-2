@@ -16,13 +16,12 @@ function AllList() {
         setSearch(e.target.value)
       }
 
-    const searchedItems = all.filter((electronic) =>
-    electronic.name.toLowerCase().includes(search.toLowerCase()))
-
+      const searchedItems = all.filter((thing) =>
+        thing.name.toLowerCase()
+            .includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((thing) => (
         <AllCard
-            key={thing.id}
             id={thing.id}
             item={thing}
         />
@@ -31,7 +30,7 @@ function AllList() {
     return (
         <>
             <div className="container">
-                <h1 className="titles">All Items</h1>
+                <h1 className="titles">All</h1>
                 <AllSearch onSearch={handleSearch} search={search}/>
                 {itemCard}
             </div>

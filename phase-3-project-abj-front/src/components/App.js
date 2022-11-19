@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 import { Route } from "react-router-dom";
 import Header from "./Header";
 import Home from "./Home";
@@ -9,6 +9,7 @@ import HomeDecorList from "./HomeDecorList"
 import Details from "./Details"
 import Categories from "./Categories";
 import AllList from "./AllList";
+import Cart from "./Cart";
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
       <div className="topPart">
         <Header />
         <Categories />
-      </div>  
+      </div>
 
       <div className="App">
           <Route exact path="/items/:id">
@@ -38,11 +39,14 @@ function App() {
           <Route path="/all">
             <AllList />
           </Route>
+          <Route path="/cart">
+            <Cart />
+          </Route>
           <Route exact path="/">
             <Home />
           </Route>
       </div >
-    </>    
+    </>
   );
 }
 

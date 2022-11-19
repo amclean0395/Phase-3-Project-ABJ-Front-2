@@ -1,4 +1,3 @@
-
 body {
   margin-top: 75px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -61,7 +60,7 @@ code {
   background-color: rgb(232, 202, 163);
   padding: 4px;
   width: 200px;
-  height: 350px;
+  height: 375px;
   margin: 15px;
   font-style: oblique;
   box-shadow: 5px 5px rgba(25, 0, 255, 0.5);
@@ -83,7 +82,7 @@ code {
   border-radius: 4px;
 }
 
-.navButtons{
+.navButtons {
   color: white;
   background-color:rgb(232, 202, 163);
   width: 100px;
@@ -94,6 +93,16 @@ code {
 
 }
 
+button {
+  color: white;
+  background-color:rgb(194, 194, 255);
+  width: 100px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-right: auto;
+  color: black;
+
+}
 
 
 .container{
@@ -127,6 +136,16 @@ code {
   margin-left: auto;
   margin-right: auto;
   border: 2px solid rgba(25, 0, 255, 0.5);
+}
+
+.cardImage2{
+  height: 200px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid rgba(25, 0, 255, 0.5);
+  background-color: lavender;
+  border-radius: 8px;
 }
 
 .btn {
@@ -292,5 +311,11 @@ h3{
   text-align: center;
 }
 
-
-
+.yellow{
+    border: 2px solid black;
+    color: black;
+    background-color: rgb(232, 202, 163);
+    width: 500px;
+    text-align: center;
+    margin: auto;
+}

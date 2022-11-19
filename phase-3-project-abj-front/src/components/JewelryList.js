@@ -16,12 +16,12 @@ function JewelryList() {
         setSearch(e.target.value)
       }
 
-    const searchedItems = jewelry.filter((electronic) =>
-    electronic.name.toLowerCase().includes(search.toLowerCase()))
+      const searchedItems = jewelry.filter((jewel) =>
+        jewel.name.toLowerCase()
+            .includes(search.toLowerCase()))
 
     const itemCard = searchedItems.map((jewel) => (
         <JewelryCard
-            key={jewel.id}
             id={jewel.id}
             item={jewel}
         />

@@ -5,8 +5,7 @@ function ReviewEditForm({ onEditReview, reviewID }) {
     const [comment, setComment] = useState('')
 
 
-    const handleEdit = (e) => {
-        e.preventDefault();
+    const handleEdit = () => {
 
         fetch(`http://localhost:9292/edit_review/${reviewID}`, {
             method: "PATCH",

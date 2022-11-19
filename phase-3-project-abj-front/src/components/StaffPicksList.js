@@ -12,7 +12,6 @@ function StaffPicksList() {
 
     const itemCard = staffPicks.map((thing) => (
         <StaffPicksCard
-            key={thing.id}
             id={thing.id}
             item={thing}
         />
@@ -21,7 +20,7 @@ function StaffPicksList() {
     return (
         <>
             <div className="container">
-                <h1 className="titles">Staff Picks!</h1>
+                <h2 className>Staff Picks!</h2>
                 {itemCard}
             </div>
         </>

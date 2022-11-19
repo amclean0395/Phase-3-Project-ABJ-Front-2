@@ -1,12 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-function InputForm({ itemId, onNewReview }){
+function InputForm({ itemId, onNewReview }) {
     const [comment, setComment] = useState('');
     const [starRating, setStarRating] = useState('')
 
-    function addNewReview(e) {
-        e.preventDefault();
-        fetch(`http://localhost:9292/new_review/`, {
+    function addNewReview() {
+        fetch(`http://localhost:9292/new_review`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -17,12 +16,12 @@ function InputForm({ itemId, onNewReview }){
             .then((review) => {
                 onNewReview(review);
                 console.log(review);
-                 setComment(comment)
+                setComment(comment)
                 setStarRating(starRating)
-        })
+            })
     }
-
-    return(
+    // ^^^ useHistory to navigate back to the Details page?
+    return (
         <>
             <h3 className="Bold">Submit a Review!</h3>
             <div className="inputForm">

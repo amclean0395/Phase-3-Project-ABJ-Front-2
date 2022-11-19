@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom"
 import InputForm from "./InputForm";
-import ReviewsList from "./ReviewList";
+import ReviewsList from "./ReviewList"
 
 function Details() {
     const [item, setItem] = useState(null)
@@ -41,7 +41,7 @@ function Details() {
 
     return (
         <>
-            <br></br>
+            <br />
             <div className="cardInfo">
                 <img className="imageSize" src={image} alt="loading..." />
                 <p>Name: {name}</p>

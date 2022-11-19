@@ -1,14 +1,14 @@
 import React from "react";
 
-function ToySearch({ onSearch, search }) {
+function ToysSearch({ onSearch, search }) {
     return (
         <div className="search">
-            <label>Search by name:</label>
+            <label>Search by Name:</label>
             <div className="suspect-container">
                 <input
                     id="search"
                     type="text"
-                    placeholder="Super Cute Voodoo..."
+                    placeholder="Crossbow..."
                     value={search}
                     onChange={onSearch}
                 />
@@ -17,4 +17,4 @@ function ToySearch({ onSearch, search }) {
     )
 }
 
-export default ToySearch
+export default ToysSearch

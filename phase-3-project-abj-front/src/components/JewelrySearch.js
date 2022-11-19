@@ -8,7 +8,7 @@ function JewelrySearch({ onSearch, search }) {
                 <input
                     id="search"
                     type="text"
-                    placeholder="Sterling..."
+                    placeholder="Gold..."
                     value={search}
                     onChange={onSearch}
                 />
